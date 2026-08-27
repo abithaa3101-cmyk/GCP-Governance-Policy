@@ -10,4 +10,5 @@ module "baselines" {
 module "exceptions" {
   source = "./exceptions"
   org_id = var.org_id
+  project_id = var.project_id
 }
