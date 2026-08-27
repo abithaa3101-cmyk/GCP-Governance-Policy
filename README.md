@@ -33,12 +33,12 @@ GitHub → GitHub Actions → Terraform → GCS State → GCP Organization Polic
 ├── variables.tf
 └── versions.tf
 
-**GitOps Workflow
-**
+## Gitops workflow
+
 Feature Branch → Pull Request → Terraform Validate → Terraform Plan
 → Review → Merge → Terraform Apply → GCP Policy Deployment
 
-Validation:
+## Validation:
 Organization-level policy enforcement
 Project-level policy exception
 Effective policy inheritance validation
@@ -46,12 +46,12 @@ Terraform state validation using GCS
 GitHub Actions deployment validation
 Drift detection and remediation
 
-Security:
+## Security:
 
 No credentials, service-account keys, or Terraform state files are stored
 in the repository. Authentication is handled through GitHub Actions secrets.
 
-Outcome:
+## Outcome:
 
 The project provides a scalable Governance-as-Code model with centralized
 policy enforcement, controlled project exceptions, automated deployments,
