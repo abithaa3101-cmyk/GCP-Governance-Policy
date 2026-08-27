@@ -30,9 +30,12 @@ jobs:
       - name: Terraform Plan
         env:
           TF_VAR_org_id: ${{ secrets.TF_VAR_org_id }}
+          TF_VAR_project_id: ${{ vars.GCP_PROJECT_ID }}
         run: terraform plan -input=false
 
       - name: Terraform Apply
         env:
           TF_VAR_org_id: ${{ secrets.TF_VAR_org_id }}
+          TF_VAR_project_id: ${{ vars.GCP_PROJECT_ID }}
         run: terraform apply -auto-approve -input=false
+        
